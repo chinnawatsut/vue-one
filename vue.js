@@ -31,3 +31,15 @@ var app4 = new Vue({
   // You can put item to todos on console
   // app4.todos.push({text : "This 4"})
 });
+
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    message: ":( TIME "
+  },
+  methods: {
+    reverseMessage: function() {
+      this.message = this.message.split('').reverse().join('')
+    }
+  }
+});
