@@ -4,6 +4,11 @@ Vue.component('greeting', {
 //Define Component before new Vue that will use component
 //In element
 
+Vue.component('todo-item', {
+  props: ['todo', 'keytodo'],
+  template: '<li>{{keytodo}}:{{todo.text}}</li>'
+});
+
 var app = new Vue({
   el: '#app',
   data: {
@@ -54,5 +59,16 @@ var app6 = new Vue({
   el: "#app-6",
   data: {
     message: ""
+  }
+});
+
+var app7 = new Vue({
+  el: "#app-7",
+  data: {
+    todos: [
+      { text: "This First" },
+      { text: "This Second" },
+      { text: "This Third" }
+    ]
   }
 });

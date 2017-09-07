@@ -33,9 +33,10 @@
     <div id="app-6">
         <p>{{message}}</p>
         <input v-model="message">
-
     </div>
-
+    <div id="app-7">
+        <todo-item v-for="(todo, keytodo) in todos" v-bind:todo="todo" v-bind:keytodo="keytodo"></todo-item>
+    </div>
 
 </body>
 <script src="./vue.js"></script>
