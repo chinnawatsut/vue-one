@@ -20,9 +20,9 @@
         <p v-if="seen">Now You see me </p>
     </div>
     <div id="app-4">
-        <li v-for="todo in todos">
-            {{todo.text}}
-        </li>
+        <div v-for="(todo, key) in todos">
+            {{key + 1}} : {{todo.text}}
+        </div>
     </div>
 
     <script src="./vue.js"></script>

@@ -28,4 +28,6 @@ var app4 = new Vue({
       { text: "This Third" }
     ]
   }
+  // You can put item to todos on console
+  // app4.todos.push({text : "This 4"})
 });
