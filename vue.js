@@ -1,3 +1,9 @@
+Vue.component('greeting', {
+  template: '<p>Hello This is Component!</p>'
+});
+//Define Component before new Vue that will use component
+//In element
+
 var app = new Vue({
   el: '#app',
   data: {
