@@ -6,3 +6,7 @@ var vm = new Vue({
   data: data
 });
 // REF.data as pointer
+
+vm.$watch('a', function(newVal, oldVal) {
+  console.log(newVal);
+});
