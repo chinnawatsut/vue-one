@@ -11,6 +11,13 @@
         <span v-once> {{a}} Prevent Data Changed</span>
     </div>
 
+    <div id="app2">
+        <img :src="img">
+        <directivx v-bind:naming='anchor' v-bind:age='age' v-bind:address='address' v-bind:infos='infos'>
+        </directivx>
+        <button v-bind:disabled="isButtonDisabled">Button</button>
+
+    </div>
 </body>
 <script src="./vue3.js"></script>
 
