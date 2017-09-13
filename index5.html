@@ -2,12 +2,15 @@
 
 <head>
     <title>Computed</title>
+    <link rel="stylesheet" href="./style5.css">
     <script src="https://unpkg.com/vue"></script>
 </head>
 
 <body>
     <div id="app">
-        {{fullname}}
+        <div v-bind:class="{ active:isActive }">
+            {{fullname}}
+        </div>
 
     </div>
 

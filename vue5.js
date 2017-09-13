@@ -2,7 +2,8 @@ var vm = new Vue({
   el: "#app",
   data: {
     first: "makrov",
-    last: "puventin"
+    last: "puventin",
+    isActive: true
   },
   computed: {
     fullname: {
