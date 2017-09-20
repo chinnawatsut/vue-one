@@ -1,28 +1,32 @@
 <template>
   <section class="container">
     <div>
-      <bark/>
-      <logo/>
-      <h1 class="title">
-        nuxtv
-      </h1>
       <h2 class="subtitle">
         Nuxt.js project
       </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
-      </div>
+      <input v-model="parentMsg">
+      <br>
+      <bark :my-message="parentMsg"  @change="normalizedSize"></bark>
     </div>
+    
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 import Bark from '~/components/Bark.vue'
 export default {
+  data : function(){
+    return{
+        parentMsg : "hello!"
+    }
+  },
+  computed: {
+    normalizedSize: function () {
+      this.parentMsg = this.parentMsg.toUpperCase()
+      return this.parentMsg.toUpperCase()
+    }
+  },
   components: {
-    Logo,
     Bark
   }
 }
